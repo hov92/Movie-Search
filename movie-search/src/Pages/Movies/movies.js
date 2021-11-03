@@ -14,7 +14,7 @@ const Movies = () => {
     const genreforURL  = useGenres(selectedGenres)
 
 
-    const fetchMovies = async () => {
+    const fetchTvShows = async () => {
         const { data } = await axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_watch_monetization_types=flatrate&page=${page}&with_genres=${genreforURL}`)
 
         setContent(data.results)
@@ -23,7 +23,7 @@ const Movies = () => {
 
     useEffect(() => {
         window.scroll(0,0);
-        fetchMovies()
+        fetchTvShows()
         // eslint-disable-next-line
     }, [page, genreforURL])
 
