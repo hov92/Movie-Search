@@ -21,7 +21,7 @@ function App() {
         <Route path="/search" component={search} />
       </Switch>
     </Container>
-    </div>
+        </div>
 
     <SimpleBottomNavigation />
     </BrowserRouter>
