@@ -64,7 +64,7 @@ import { Button,  Tab, Tabs, TextField } from "@mui/material";
             aria-label="disabled tabs example"
           >
             <Tab style={{ width: "50%" }} label="Search Movies" />
-            <Tab style={{ width: "50%" }} label="Search TV Series" />
+            <Tab style={{ width: "50%" }} label="Search TV Shows" />
           </Tabs>
         <div className="trending">
           {content &&
@@ -81,7 +81,7 @@ import { Button,  Tab, Tabs, TextField } from "@mui/material";
             ))}
           {searchText &&
             !content &&
-            (type ? <h2>No Series Found</h2> : <h2>No Movies Found</h2>)}
+            (type ? <h2>No Tv Shows Found</h2> : <h2>No Movies Found</h2>)}
         </div>
         {numOfPages > 1 && (
           <CustomPagination setPage={setPage} numOfPages={numOfPages} />
