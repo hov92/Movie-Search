@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { makeStyles } from '@mui/styles';
 import Modal from '@mui/material/Modal';
 import Backdrop from '@mui/material/Backdrop';
-import Fade from '@mui/material/Fade';
+import { Fade } from '@mui/material';
 import axios from "axios";
 import {
     img_500,
@@ -55,7 +55,7 @@ export default function TransitionsModal({ children, media_type, id }) {
         // console.log(data);
     };
 
-    const fetchVideo = async () => {
+    const fetchVideo = async (children) => {
         const { data } = await axios.get(
             `https://api.themoviedb.org/3/${media_type}/${id}/videos?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`
         );

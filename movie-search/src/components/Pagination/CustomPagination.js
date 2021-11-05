@@ -20,8 +20,8 @@ const CustomPagination = ({setPage, numOfPages = 10}) => {
         }}>
             <Stack spacing={2}>
                 <Pagination 
-                count={numOfPages} 
                 onChange={(e)=> handlePageChange(e.target.textContent)} 
+                count={numOfPages} 
                 showFirstButton 
                 showLastButton />
             </Stack>
