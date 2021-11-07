@@ -55,7 +55,7 @@ import { Button,  Tab, Tabs, TextField } from "@mui/material";
           <Tabs
             value={type}
             indicatorColor="primary"
-            textColor="secondary"
+            textColor="primary"
             onChange={(event, newValue) => {
               setType(newValue);
               setPage(1);
@@ -64,9 +64,8 @@ import { Button,  Tab, Tabs, TextField } from "@mui/material";
             aria-label="disabled tabs example"
           >
             <Tab style={{ width: "50%" }} label="Search Movies" />
-            <Tab style={{ width: "50%" }} label="Search TV Shows" />
+            <Tab style={{ width: "50%" }} label="Search TV Series" />
           </Tabs>
-          
         <div className="trending">
           {content &&
             content.map((c) => (
@@ -82,9 +81,8 @@ import { Button,  Tab, Tabs, TextField } from "@mui/material";
             ))}
           {searchText &&
             !content &&
-            (type ? <h2>No Tv Shows Found</h2> : <h2>No Movies Found</h2>)}
+            (type ? <h2>No Series Found</h2> : <h2>No Movies Found</h2>)}
         </div>
-        
         {numOfPages > 1 && (
           <CustomPagination setPage={setPage} numOfPages={numOfPages} />
         )}
